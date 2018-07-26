@@ -1,0 +1,150 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Temperature Addon"
+Date ""
+Rev ""
+Comp ""
+Comment1 "#badgelife"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Semiconductors:TMP112 U1
+U 1 1 5B536B36
+P 2850 2400
+F 0 "U1" H 2850 2765 50  0000 C CNN
+F 1 "TMP112" H 2850 2674 50  0000 C CNN
+F 2 "SMD_Semiconductors:SOT-5X3" H 2850 2400 50  0001 C CNN
+F 3 "" H 2850 2400 50  0001 C CNN
+	1    2850 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_02x02_Counter_Clockwise J1
+U 1 1 5B536BE7
+P 5500 2300
+F 0 "J1" H 5550 2517 50  0000 C CNN
+F 1 "#badgelife" H 5550 2426 50  0000 C CNN
+F 2 "Badgelife:ShittyAddon_SMD_only_SAO" H 5500 2300 50  0001 C CNN
+F 3 "~" H 5500 2300 50  0001 C CNN
+	1    5500 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C1
+U 1 1 5B536C62
+P 3700 2750
+F 0 "C1" H 3815 2796 50  0000 L CNN
+F 1 "100nF" H 3815 2705 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 3738 2600 50  0001 C CNN
+F 3 "" H 3700 2750 50  0001 C CNN
+	1    3700 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0101
+U 1 1 5B536DD3
+P 3900 2200
+F 0 "#PWR0101" H 3900 2050 50  0001 C CNN
+F 1 "VCC" H 3917 2373 50  0000 C CNN
+F 2 "" H 3900 2200 50  0001 C CNN
+F 3 "" H 3900 2200 50  0001 C CNN
+	1    3900 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5B536E0C
+P 2200 3100
+F 0 "#PWR0102" H 2200 2850 50  0001 C CNN
+F 1 "GND" H 2205 2927 50  0000 C CNN
+F 2 "" H 2200 3100 50  0001 C CNN
+F 3 "" H 2200 3100 50  0001 C CNN
+	1    2200 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 2400 2200 2400
+Wire Wire Line
+	2200 2400 2200 3100
+Wire Wire Line
+	3200 2400 3700 2400
+Wire Wire Line
+	3900 2400 3900 2200
+Wire Wire Line
+	3700 2600 3700 2400
+Connection ~ 3700 2400
+Wire Wire Line
+	3700 2400 3900 2400
+$Comp
+L power:GND #PWR0103
+U 1 1 5B536E4A
+P 3700 3100
+F 0 "#PWR0103" H 3700 2850 50  0001 C CNN
+F 1 "GND" H 3705 2927 50  0000 C CNN
+F 2 "" H 3700 3100 50  0001 C CNN
+F 3 "" H 3700 3100 50  0001 C CNN
+	1    3700 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5B536E5B
+P 5200 2500
+F 0 "#PWR0104" H 5200 2250 50  0001 C CNN
+F 1 "GND" H 5205 2327 50  0000 C CNN
+F 2 "" H 5200 2500 50  0001 C CNN
+F 3 "" H 5200 2500 50  0001 C CNN
+	1    5200 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0105
+U 1 1 5B536E6C
+P 5200 2150
+F 0 "#PWR0105" H 5200 2000 50  0001 C CNN
+F 1 "VCC" H 5217 2323 50  0000 C CNN
+F 2 "" H 5200 2150 50  0001 C CNN
+F 3 "" H 5200 2150 50  0001 C CNN
+	1    5200 2150
+	1    0    0    -1  
+$EndComp
+Text GLabel 5800 2300 2    50   Input ~ 0
+SDA
+Text GLabel 5800 2400 2    50   Input ~ 0
+SCL
+Text GLabel 2500 2300 0    50   Input ~ 0
+SCL
+Text GLabel 3200 2300 2    50   Input ~ 0
+SDA
+$Comp
+L power:GND #PWR0106
+U 1 1 5B536EDD
+P 3400 3100
+F 0 "#PWR0106" H 3400 2850 50  0001 C CNN
+F 1 "GND" H 3405 2927 50  0000 C CNN
+F 2 "" H 3400 3100 50  0001 C CNN
+F 3 "" H 3400 3100 50  0001 C CNN
+	1    3400 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 2500 3400 2500
+Wire Wire Line
+	3400 2500 3400 3100
+Wire Wire Line
+	3700 2900 3700 3100
+Wire Wire Line
+	5300 2300 5200 2300
+Wire Wire Line
+	5200 2300 5200 2150
+Wire Wire Line
+	5300 2400 5200 2400
+Wire Wire Line
+	5200 2400 5200 2500
+$EndSCHEMATC

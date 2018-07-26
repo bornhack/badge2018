@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name Badgelife)(type KiCad)(uri /Users/tf/Documents/Libraries/KiCad_flummer.net/Badgelife.pretty)(options "")(descr ""))
+  (lib (name Connectors)(type KiCad)(uri /Users/tf/Documents/Libraries/KiCad_flummer.net/Connectors.pretty)(options "")(descr ""))
+)

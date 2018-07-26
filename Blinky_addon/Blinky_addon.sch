@@ -1,0 +1,530 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Semiconductors:TCA9534 U1
+U 1 1 5B548AEB
+P 3150 2550
+F 0 "U1" H 3150 3165 50  0000 C CNN
+F 1 "TCA9534" H 3150 3074 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-16W_7.5x10.3mm_Pitch1.27mm" H 3150 2550 50  0001 C CNN
+F 3 "" H 3150 2550 50  0001 C CNN
+	1    3150 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_02x02_Counter_Clockwise J1
+U 1 1 5B548B3E
+P 6600 2400
+F 0 "J1" H 6650 2617 50  0000 C CNN
+F 1 "#badgelife" H 6650 2526 50  0000 C CNN
+F 2 "Badgelife:ShittyAddon_SMD_only_SAO" H 6600 2400 50  0001 C CNN
+F 3 "~" H 6600 2400 50  0001 C CNN
+	1    6600 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0101
+U 1 1 5B548BA5
+P 6200 2300
+F 0 "#PWR0101" H 6200 2150 50  0001 C CNN
+F 1 "VCC" H 6217 2473 50  0000 C CNN
+F 2 "" H 6200 2300 50  0001 C CNN
+F 3 "" H 6200 2300 50  0001 C CNN
+	1    6200 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5B548BE9
+P 6200 2600
+F 0 "#PWR0102" H 6200 2350 50  0001 C CNN
+F 1 "GND" H 6205 2427 50  0000 C CNN
+F 2 "" H 6200 2600 50  0001 C CNN
+F 3 "" H 6200 2600 50  0001 C CNN
+	1    6200 2600
+	1    0    0    -1  
+$EndComp
+Text GLabel 6900 2400 2    50   Input ~ 0
+SDA
+Text GLabel 6900 2500 2    50   Input ~ 0
+SCL
+Wire Wire Line
+	6200 2300 6200 2400
+Wire Wire Line
+	6200 2400 6400 2400
+Wire Wire Line
+	6400 2500 6200 2500
+Wire Wire Line
+	6200 2500 6200 2600
+Text GLabel 3500 2300 2    50   Input ~ 0
+SDA
+Text GLabel 3500 2400 2    50   Input ~ 0
+SCL
+$Comp
+L power:GND #PWR0103
+U 1 1 5B548C51
+P 2700 3000
+F 0 "#PWR0103" H 2700 2750 50  0001 C CNN
+F 1 "GND" H 2705 2827 50  0000 C CNN
+F 2 "" H 2700 3000 50  0001 C CNN
+F 3 "" H 2700 3000 50  0001 C CNN
+	1    2700 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0104
+U 1 1 5B548C60
+P 3600 2100
+F 0 "#PWR0104" H 3600 1950 50  0001 C CNN
+F 1 "VCC" H 3617 2273 50  0000 C CNN
+F 2 "" H 3600 2100 50  0001 C CNN
+F 3 "" H 3600 2100 50  0001 C CNN
+	1    3600 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 2200 3600 2200
+Wire Wire Line
+	3600 2200 3600 2100
+Wire Wire Line
+	2800 2900 2700 2900
+Wire Wire Line
+	2700 2900 2700 3000
+$Comp
+L device:Jumper_NC_Small JP1
+U 1 1 5B548D05
+P 2500 2200
+F 0 "JP1" H 2500 2412 50  0000 C CNN
+F 1 "Jumper_NC_Small" H 2500 2321 50  0000 C CNN
+F 2 "Connectors:Solder_Jumper" H 2500 2200 50  0001 C CNN
+F 3 "" H 2500 2200 50  0001 C CNN
+	1    2500 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:Jumper_NC_Small JP2
+U 1 1 5B548D35
+P 2500 2300
+F 0 "JP2" H 2500 2512 50  0000 C CNN
+F 1 "Jumper_NC_Small" H 2500 2421 50  0000 C CNN
+F 2 "Connectors:Solder_Jumper" H 2500 2300 50  0001 C CNN
+F 3 "" H 2500 2300 50  0001 C CNN
+	1    2500 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:Jumper_NC_Small JP3
+U 1 1 5B548D4D
+P 2500 2400
+F 0 "JP3" H 2500 2612 50  0000 C CNN
+F 1 "Jumper_NC_Small" H 2500 2521 50  0000 C CNN
+F 2 "Connectors:Solder_Jumper" H 2500 2400 50  0001 C CNN
+F 3 "" H 2500 2400 50  0001 C CNN
+	1    2500 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 2200 2600 2200
+Wire Wire Line
+	2800 2300 2600 2300
+Wire Wire Line
+	2800 2400 2600 2400
+$Comp
+L power:GND #PWR0105
+U 1 1 5B548F09
+P 2300 2500
+F 0 "#PWR0105" H 2300 2250 50  0001 C CNN
+F 1 "GND" H 2305 2327 50  0000 C CNN
+F 2 "" H 2300 2500 50  0001 C CNN
+F 3 "" H 2300 2500 50  0001 C CNN
+	1    2300 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 2200 2300 2200
+Wire Wire Line
+	2300 2200 2300 2300
+Wire Wire Line
+	2400 2400 2300 2400
+Connection ~ 2300 2400
+Wire Wire Line
+	2300 2400 2300 2500
+Wire Wire Line
+	2400 2300 2300 2300
+Connection ~ 2300 2300
+Wire Wire Line
+	2300 2300 2300 2400
+Text GLabel 2800 2500 0    50   Input ~ 0
+P0
+Text GLabel 2800 2600 0    50   Input ~ 0
+P1
+Text GLabel 2800 2700 0    50   Input ~ 0
+P2
+Text GLabel 2800 2800 0    50   Input ~ 0
+P3
+Text GLabel 3500 2900 2    50   Input ~ 0
+P4
+Text GLabel 3500 2800 2    50   Input ~ 0
+P5
+Text GLabel 3500 2700 2    50   Input ~ 0
+P6
+Text GLabel 3500 2600 2    50   Input ~ 0
+P7
+$Comp
+L device:LED D3
+U 1 1 5B5496E6
+P 2800 4550
+F 0 "D3" V 2838 4433 50  0000 R CNN
+F 1 "LED" V 2747 4433 50  0000 R CNN
+F 2 "LEDs:LED_0805_HandSoldering" H 2800 4550 50  0001 C CNN
+F 3 "~" H 2800 4550 50  0001 C CNN
+	1    2800 4550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L device:R R3
+U 1 1 5B54977A
+P 2800 4050
+F 0 "R3" H 2870 4096 50  0000 L CNN
+F 1 "1K" H 2870 4005 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2730 4050 50  0001 C CNN
+F 3 "" H 2800 4050 50  0001 C CNN
+	1    2800 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0106
+U 1 1 5B5497A8
+P 2800 3700
+F 0 "#PWR0106" H 2800 3550 50  0001 C CNN
+F 1 "VCC" H 2817 3873 50  0000 C CNN
+F 2 "" H 2800 3700 50  0001 C CNN
+F 3 "" H 2800 3700 50  0001 C CNN
+	1    2800 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 3700 2800 3900
+Wire Wire Line
+	2800 4200 2800 4400
+Wire Wire Line
+	2800 4700 2800 4800
+Wire Wire Line
+	2800 4800 2700 4800
+$Comp
+L device:LED D2
+U 1 1 5B549D7E
+P 2250 4550
+F 0 "D2" V 2288 4433 50  0000 R CNN
+F 1 "LED" V 2197 4433 50  0000 R CNN
+F 2 "LEDs:LED_0805_HandSoldering" H 2250 4550 50  0001 C CNN
+F 3 "~" H 2250 4550 50  0001 C CNN
+	1    2250 4550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L device:R R2
+U 1 1 5B549D85
+P 2250 4050
+F 0 "R2" H 2320 4096 50  0000 L CNN
+F 1 "1K" H 2320 4005 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2180 4050 50  0001 C CNN
+F 3 "" H 2250 4050 50  0001 C CNN
+	1    2250 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0107
+U 1 1 5B549D8C
+P 2250 3700
+F 0 "#PWR0107" H 2250 3550 50  0001 C CNN
+F 1 "VCC" H 2267 3873 50  0000 C CNN
+F 2 "" H 2250 3700 50  0001 C CNN
+F 3 "" H 2250 3700 50  0001 C CNN
+	1    2250 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 3700 2250 3900
+Wire Wire Line
+	2250 4200 2250 4400
+Wire Wire Line
+	2250 4700 2250 4800
+Wire Wire Line
+	2250 4800 2150 4800
+$Comp
+L device:LED D1
+U 1 1 5B54A0A8
+P 1700 4550
+F 0 "D1" V 1738 4433 50  0000 R CNN
+F 1 "LED" V 1647 4433 50  0000 R CNN
+F 2 "LEDs:LED_0805_HandSoldering" H 1700 4550 50  0001 C CNN
+F 3 "~" H 1700 4550 50  0001 C CNN
+	1    1700 4550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L device:R R1
+U 1 1 5B54A0AF
+P 1700 4050
+F 0 "R1" H 1770 4096 50  0000 L CNN
+F 1 "1K" H 1770 4005 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 1630 4050 50  0001 C CNN
+F 3 "" H 1700 4050 50  0001 C CNN
+	1    1700 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0108
+U 1 1 5B54A0B6
+P 1700 3700
+F 0 "#PWR0108" H 1700 3550 50  0001 C CNN
+F 1 "VCC" H 1717 3873 50  0000 C CNN
+F 2 "" H 1700 3700 50  0001 C CNN
+F 3 "" H 1700 3700 50  0001 C CNN
+	1    1700 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 3700 1700 3900
+Wire Wire Line
+	1700 4200 1700 4400
+Wire Wire Line
+	1700 4700 1700 4800
+Wire Wire Line
+	1700 4800 1600 4800
+$Comp
+L device:LED D4
+U 1 1 5B54A513
+P 3300 4550
+F 0 "D4" V 3338 4433 50  0000 R CNN
+F 1 "LED" V 3247 4433 50  0000 R CNN
+F 2 "LEDs:LED_0805_HandSoldering" H 3300 4550 50  0001 C CNN
+F 3 "~" H 3300 4550 50  0001 C CNN
+	1    3300 4550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L device:R R4
+U 1 1 5B54A51A
+P 3300 4050
+F 0 "R4" H 3370 4096 50  0000 L CNN
+F 1 "1K" H 3370 4005 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 3230 4050 50  0001 C CNN
+F 3 "" H 3300 4050 50  0001 C CNN
+	1    3300 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0109
+U 1 1 5B54A521
+P 3300 3700
+F 0 "#PWR0109" H 3300 3550 50  0001 C CNN
+F 1 "VCC" H 3317 3873 50  0000 C CNN
+F 2 "" H 3300 3700 50  0001 C CNN
+F 3 "" H 3300 3700 50  0001 C CNN
+	1    3300 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 3700 3300 3900
+Wire Wire Line
+	3300 4200 3300 4400
+Wire Wire Line
+	3300 4700 3300 4800
+Wire Wire Line
+	3300 4800 3200 4800
+$Comp
+L device:LED D5
+U 1 1 5B54AA5E
+P 3800 4550
+F 0 "D5" V 3838 4433 50  0000 R CNN
+F 1 "LED" V 3747 4433 50  0000 R CNN
+F 2 "LEDs:LED_0805_HandSoldering" H 3800 4550 50  0001 C CNN
+F 3 "~" H 3800 4550 50  0001 C CNN
+	1    3800 4550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L device:R R5
+U 1 1 5B54AA65
+P 3800 4050
+F 0 "R5" H 3870 4096 50  0000 L CNN
+F 1 "1K" H 3870 4005 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 3730 4050 50  0001 C CNN
+F 3 "" H 3800 4050 50  0001 C CNN
+	1    3800 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0110
+U 1 1 5B54AA6C
+P 3800 3700
+F 0 "#PWR0110" H 3800 3550 50  0001 C CNN
+F 1 "VCC" H 3817 3873 50  0000 C CNN
+F 2 "" H 3800 3700 50  0001 C CNN
+F 3 "" H 3800 3700 50  0001 C CNN
+	1    3800 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 3700 3800 3900
+Wire Wire Line
+	3800 4200 3800 4400
+Wire Wire Line
+	3800 4700 3800 4800
+Wire Wire Line
+	3800 4800 3700 4800
+$Comp
+L device:LED D6
+U 1 1 5B54B0A1
+P 4300 4550
+F 0 "D6" V 4338 4433 50  0000 R CNN
+F 1 "LED" V 4247 4433 50  0000 R CNN
+F 2 "LEDs:LED_0805_HandSoldering" H 4300 4550 50  0001 C CNN
+F 3 "~" H 4300 4550 50  0001 C CNN
+	1    4300 4550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L device:R R6
+U 1 1 5B54B0A8
+P 4300 4050
+F 0 "R6" H 4370 4096 50  0000 L CNN
+F 1 "1K" H 4370 4005 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4230 4050 50  0001 C CNN
+F 3 "" H 4300 4050 50  0001 C CNN
+	1    4300 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0111
+U 1 1 5B54B0AF
+P 4300 3700
+F 0 "#PWR0111" H 4300 3550 50  0001 C CNN
+F 1 "VCC" H 4317 3873 50  0000 C CNN
+F 2 "" H 4300 3700 50  0001 C CNN
+F 3 "" H 4300 3700 50  0001 C CNN
+	1    4300 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 3700 4300 3900
+Wire Wire Line
+	4300 4200 4300 4400
+Wire Wire Line
+	4300 4700 4300 4800
+Wire Wire Line
+	4300 4800 4200 4800
+$Comp
+L device:LED D7
+U 1 1 5B54B7F6
+P 4800 4550
+F 0 "D7" V 4838 4433 50  0000 R CNN
+F 1 "LED" V 4747 4433 50  0000 R CNN
+F 2 "LEDs:LED_0805_HandSoldering" H 4800 4550 50  0001 C CNN
+F 3 "~" H 4800 4550 50  0001 C CNN
+	1    4800 4550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L device:R R7
+U 1 1 5B54B7FD
+P 4800 4050
+F 0 "R7" H 4870 4096 50  0000 L CNN
+F 1 "1K" H 4870 4005 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4730 4050 50  0001 C CNN
+F 3 "" H 4800 4050 50  0001 C CNN
+	1    4800 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0112
+U 1 1 5B54B804
+P 4800 3700
+F 0 "#PWR0112" H 4800 3550 50  0001 C CNN
+F 1 "VCC" H 4817 3873 50  0000 C CNN
+F 2 "" H 4800 3700 50  0001 C CNN
+F 3 "" H 4800 3700 50  0001 C CNN
+	1    4800 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 3700 4800 3900
+Wire Wire Line
+	4800 4200 4800 4400
+Wire Wire Line
+	4800 4700 4800 4800
+Wire Wire Line
+	4800 4800 4700 4800
+$Comp
+L device:LED D8
+U 1 1 5B54C085
+P 5300 4550
+F 0 "D8" V 5338 4433 50  0000 R CNN
+F 1 "LED" V 5247 4433 50  0000 R CNN
+F 2 "LEDs:LED_0805_HandSoldering" H 5300 4550 50  0001 C CNN
+F 3 "~" H 5300 4550 50  0001 C CNN
+	1    5300 4550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L device:R R8
+U 1 1 5B54C08C
+P 5300 4050
+F 0 "R8" H 5370 4096 50  0000 L CNN
+F 1 "1K" H 5370 4005 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 5230 4050 50  0001 C CNN
+F 3 "" H 5300 4050 50  0001 C CNN
+	1    5300 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0113
+U 1 1 5B54C093
+P 5300 3700
+F 0 "#PWR0113" H 5300 3550 50  0001 C CNN
+F 1 "VCC" H 5317 3873 50  0000 C CNN
+F 2 "" H 5300 3700 50  0001 C CNN
+F 3 "" H 5300 3700 50  0001 C CNN
+	1    5300 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 3700 5300 3900
+Wire Wire Line
+	5300 4200 5300 4400
+Wire Wire Line
+	5300 4700 5300 4800
+Wire Wire Line
+	5300 4800 5200 4800
+Text GLabel 1600 4800 0    50   Input ~ 0
+P0
+Text GLabel 2150 4800 0    50   Input ~ 0
+P1
+Text GLabel 2700 4800 0    50   Input ~ 0
+P2
+Text GLabel 3200 4800 0    50   Input ~ 0
+P3
+Text GLabel 3700 4800 0    50   Input ~ 0
+P4
+Text GLabel 4200 4800 0    50   Input ~ 0
+P5
+Text GLabel 4700 4800 0    50   Input ~ 0
+P6
+Text GLabel 5200 4800 0    50   Input ~ 0
+P7
+$EndSCHEMATC

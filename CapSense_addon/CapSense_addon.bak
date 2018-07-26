@@ -1,0 +1,270 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Conn_02x02_Counter_Clockwise J1
+U 1 1 5B547EFA
+P 7600 2500
+F 0 "J1" H 7650 2717 50  0000 C CNN
+F 1 "#badgelife" H 7650 2626 50  0000 C CNN
+F 2 "Badgelife:ShittyAddon_PTH_only_SAO" H 7600 2500 50  0001 C CNN
+F 3 "~" H 7600 2500 50  0001 C CNN
+	1    7600 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Semiconductors:FDC1004 U1
+U 1 1 5B547F5A
+P 3400 2600
+F 0 "U1" H 3400 3065 50  0000 C CNN
+F 1 "FDC1004" H 3400 2974 50  0000 C CNN
+F 2 "SMD_Semiconductors:VSSOP-10" H 3400 2600 50  0001 C CNN
+F 3 "" H 3400 2600 50  0001 C CNN
+	1    3400 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5B547F9E
+P 7200 2700
+F 0 "#PWR0101" H 7200 2450 50  0001 C CNN
+F 1 "GND" H 7205 2527 50  0000 C CNN
+F 2 "" H 7200 2700 50  0001 C CNN
+F 3 "" H 7200 2700 50  0001 C CNN
+	1    7200 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0102
+U 1 1 5B547FF1
+P 7200 2400
+F 0 "#PWR0102" H 7200 2250 50  0001 C CNN
+F 1 "VCC" H 7217 2573 50  0000 C CNN
+F 2 "" H 7200 2400 50  0001 C CNN
+F 3 "" H 7200 2400 50  0001 C CNN
+	1    7200 2400
+	1    0    0    -1  
+$EndComp
+Text GLabel 7900 2500 2    50   Input ~ 0
+SDA
+Text GLabel 7900 2600 2    50   Input ~ 0
+SCL
+Wire Wire Line
+	7200 2400 7200 2500
+Wire Wire Line
+	7200 2500 7400 2500
+Wire Wire Line
+	7400 2600 7200 2600
+Wire Wire Line
+	7200 2600 7200 2700
+Text GLabel 3800 2400 2    50   Input ~ 0
+SDA
+Text GLabel 3800 2500 2    50   Input ~ 0
+SCL
+$Comp
+L power:VCC #PWR0103
+U 1 1 5B54806D
+P 4300 2200
+F 0 "#PWR0103" H 4300 2050 50  0001 C CNN
+F 1 "VCC" H 4317 2373 50  0000 C CNN
+F 2 "" H 4300 2200 50  0001 C CNN
+F 3 "" H 4300 2200 50  0001 C CNN
+	1    4300 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5B54807C
+P 4300 2950
+F 0 "#PWR0104" H 4300 2700 50  0001 C CNN
+F 1 "GND" H 4305 2777 50  0000 C CNN
+F 2 "" H 4300 2950 50  0001 C CNN
+F 3 "" H 4300 2950 50  0001 C CNN
+	1    4300 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 2700 4300 2700
+Wire Wire Line
+	4300 2700 4300 2950
+Wire Wire Line
+	3800 2600 4300 2600
+Wire Wire Line
+	4300 2600 4300 2200
+$Comp
+L device:C C1
+U 1 1 5B548117
+P 4650 2650
+F 0 "C1" H 4765 2696 50  0000 L CNN
+F 1 "100nF" H 4765 2605 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 4688 2500 50  0001 C CNN
+F 3 "" H 4650 2650 50  0001 C CNN
+	1    4650 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C2
+U 1 1 5B548149
+P 5150 2650
+F 0 "C2" H 5265 2696 50  0000 L CNN
+F 1 "1uF" H 5265 2605 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 5188 2500 50  0001 C CNN
+F 3 "" H 5150 2650 50  0001 C CNN
+	1    5150 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5B5481C7
+P 4650 2950
+F 0 "#PWR0105" H 4650 2700 50  0001 C CNN
+F 1 "GND" H 4655 2777 50  0000 C CNN
+F 2 "" H 4650 2950 50  0001 C CNN
+F 3 "" H 4650 2950 50  0001 C CNN
+	1    4650 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 5B5481DA
+P 5150 2950
+F 0 "#PWR0106" H 5150 2700 50  0001 C CNN
+F 1 "GND" H 5155 2777 50  0000 C CNN
+F 2 "" H 5150 2950 50  0001 C CNN
+F 3 "" H 5150 2950 50  0001 C CNN
+	1    5150 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0107
+U 1 1 5B5481ED
+P 4650 2200
+F 0 "#PWR0107" H 4650 2050 50  0001 C CNN
+F 1 "VCC" H 4667 2373 50  0000 C CNN
+F 2 "" H 4650 2200 50  0001 C CNN
+F 3 "" H 4650 2200 50  0001 C CNN
+	1    4650 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0108
+U 1 1 5B548200
+P 5150 2200
+F 0 "#PWR0108" H 5150 2050 50  0001 C CNN
+F 1 "VCC" H 5167 2373 50  0000 C CNN
+F 2 "" H 5150 2200 50  0001 C CNN
+F 3 "" H 5150 2200 50  0001 C CNN
+	1    5150 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 2200 4650 2500
+Wire Wire Line
+	5150 2200 5150 2500
+Wire Wire Line
+	5150 2800 5150 2950
+Wire Wire Line
+	4650 2800 4650 2950
+Text GLabel 3000 2400 0    50   Input ~ 0
+SHLD1
+Text GLabel 3800 2800 2    50   Input ~ 0
+SHLD2
+Text GLabel 3000 2500 0    50   Input ~ 0
+CIN1
+Text GLabel 3000 2600 0    50   Input ~ 0
+CIN2
+Text GLabel 3000 2700 0    50   Input ~ 0
+CIN3
+Text GLabel 3000 2800 0    50   Input ~ 0
+CIN4
+$Comp
+L Connector:Conn_01x01 J?
+U 1 1 5B548603
+P 3650 3600
+F 0 "J?" H 3730 3642 50  0000 L CNN
+F 1 "Conn_01x01" H 3730 3551 50  0000 L CNN
+F 2 "" H 3650 3600 50  0001 C CNN
+F 3 "~" H 3650 3600 50  0001 C CNN
+	1    3650 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01 J?
+U 1 1 5B54868A
+P 3650 3850
+F 0 "J?" H 3730 3892 50  0000 L CNN
+F 1 "Conn_01x01" H 3730 3801 50  0000 L CNN
+F 2 "" H 3650 3850 50  0001 C CNN
+F 3 "~" H 3650 3850 50  0001 C CNN
+	1    3650 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01 J?
+U 1 1 5B5486A5
+P 3650 4100
+F 0 "J?" H 3730 4142 50  0000 L CNN
+F 1 "Conn_01x01" H 3730 4051 50  0000 L CNN
+F 2 "" H 3650 4100 50  0001 C CNN
+F 3 "~" H 3650 4100 50  0001 C CNN
+	1    3650 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01 J?
+U 1 1 5B5486C4
+P 3650 4350
+F 0 "J?" H 3730 4392 50  0000 L CNN
+F 1 "Conn_01x01" H 3730 4301 50  0000 L CNN
+F 2 "" H 3650 4350 50  0001 C CNN
+F 3 "~" H 3650 4350 50  0001 C CNN
+	1    3650 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01 J?
+U 1 1 5B5486E5
+P 3650 4600
+F 0 "J?" H 3730 4642 50  0000 L CNN
+F 1 "Conn_01x01" H 3730 4551 50  0000 L CNN
+F 2 "" H 3650 4600 50  0001 C CNN
+F 3 "~" H 3650 4600 50  0001 C CNN
+	1    3650 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01 J?
+U 1 1 5B548708
+P 3650 4850
+F 0 "J?" H 3730 4892 50  0000 L CNN
+F 1 "Conn_01x01" H 3730 4801 50  0000 L CNN
+F 2 "" H 3650 4850 50  0001 C CNN
+F 3 "~" H 3650 4850 50  0001 C CNN
+	1    3650 4850
+	1    0    0    -1  
+$EndComp
+Text GLabel 3450 3600 0    50   Input ~ 0
+CIN1
+Text GLabel 3450 3850 0    50   Input ~ 0
+CIN2
+Text GLabel 3450 4100 0    50   Input ~ 0
+CIN3
+Text GLabel 3450 4350 0    50   Input ~ 0
+CIN4
+Text GLabel 3450 4600 0    50   Input ~ 0
+SHLD1
+Text GLabel 3450 4850 0    50   Input ~ 0
+SHLD2
+$EndSCHEMATC

@@ -1,0 +1,11 @@
+(fp_lib_table
+  (lib (name Badgelife)(type KiCad)(uri /Users/tf/Documents/Libraries/KiCad_flummer.net/Badgelife.pretty)(options "")(descr ""))
+  (lib (name Connectors)(type KiCad)(uri /Users/tf/Documents/Libraries/KiCad_flummer.net/Connectors.pretty)(options "")(descr ""))
+  (lib (name Diodes)(type KiCad)(uri /Users/tf/Documents/Libraries/KiCad_flummer.net/Diodes.pretty)(options "")(descr ""))
+  (lib (name Electromagnetic)(type KiCad)(uri /Users/tf/Documents/Libraries/KiCad_flummer.net/Electromagnetic.pretty)(options "")(descr ""))
+  (lib (name Measurements)(type KiCad)(uri /Users/tf/Documents/Libraries/KiCad_flummer.net/Measurements.pretty)(options "")(descr ""))
+  (lib (name Mechanical)(type KiCad)(uri /Users/tf/Documents/Libraries/KiCad_flummer.net/Mechanical.pretty)(options "")(descr ""))
+  (lib (name Opto)(type KiCad)(uri /Users/tf/Documents/Libraries/KiCad_flummer.net/Opto.pretty)(options "")(descr ""))
+  (lib (name Power)(type KiCad)(uri /Users/tf/Documents/Libraries/KiCad_flummer.net/Power.pretty)(options "")(descr ""))
+  (lib (name SMD_Semiconductors)(type KiCad)(uri /Users/tf/Documents/Libraries/KiCad_flummer.net/SMD_Semiconductors.pretty)(options "")(descr ""))
+)

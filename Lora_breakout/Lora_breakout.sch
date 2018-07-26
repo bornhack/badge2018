@@ -1,0 +1,211 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "LORA RFM95 breakout addon"
+Date ""
+Rev ""
+Comp ""
+Comment1 "#badgelife"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L RFM_module:RFM92_95_96_97_98 U1
+U 1 1 5B538795
+P 3750 2600
+F 0 "U1" H 3775 3247 60  0000 C CNN
+F 1 "RFM92_95_96_97_98" H 3775 3141 60  0000 C CNN
+F 2 "Modules:RFM92_95_96_98" H 3950 2800 60  0001 C CNN
+F 3 "" H 3950 2800 60  0001 C CNN
+	1    3750 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_02x02_Counter_Clockwise J1
+U 1 1 5B538818
+P 1800 2100
+F 0 "J1" H 1850 2317 50  0000 C CNN
+F 1 "Conn_02x02_Counter_Clockwise" H 1850 2226 50  0000 C CNN
+F 2 "Badgelife:ShittyAddon_PTH_only_SAO" H 1800 2100 50  0001 C CNN
+F 3 "~" H 1800 2100 50  0001 C CNN
+	1    1800 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_02x02_Counter_Clockwise J4
+U 1 1 5B53884D
+P 1800 3200
+F 0 "J4" H 1850 3417 50  0000 C CNN
+F 1 "Conn_02x02_Counter_Clockwise" H 1850 3326 50  0000 C CNN
+F 2 "Badgelife:ShittyAddon_PTH_only_SAO" H 1800 3200 50  0001 C CNN
+F 3 "~" H 1800 3200 50  0001 C CNN
+	1    1800 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_02x03_Odd_Even J2
+U 1 1 5B538895
+P 1800 2700
+F 0 "J2" H 1850 3017 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 1850 2926 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x03_Pitch2.54mm" H 1800 2700 50  0001 C CNN
+F 3 "~" H 1800 2700 50  0001 C CNN
+	1    1800 2700
+	1    0    0    -1  
+$EndComp
+Text GLabel 1600 2600 0    50   Input ~ 0
+MOSI
+Text GLabel 2100 2600 2    50   Input ~ 0
+MISO
+Text GLabel 1600 2800 0    50   Input ~ 0
+SPI_CS
+Text GLabel 2100 2800 2    50   Input ~ 0
+SPI_CLK
+Text GLabel 1600 2700 0    50   Input ~ 0
+PC2
+Text GLabel 2100 2700 2    50   Input ~ 0
+PB11
+Text GLabel 2100 2200 2    50   Input ~ 0
+SCL
+Text GLabel 2100 2100 2    50   Input ~ 0
+SDA
+$Comp
+L power:GND #PWR0101
+U 1 1 5B5389D9
+P 1200 2300
+F 0 "#PWR0101" H 1200 2050 50  0001 C CNN
+F 1 "GND" H 1205 2127 50  0000 C CNN
+F 2 "" H 1200 2300 50  0001 C CNN
+F 3 "" H 1200 2300 50  0001 C CNN
+	1    1200 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0102
+U 1 1 5B538A15
+P 1200 2000
+F 0 "#PWR0102" H 1200 1850 50  0001 C CNN
+F 1 "VCC" H 1217 2173 50  0000 C CNN
+F 2 "" H 1200 2000 50  0001 C CNN
+F 3 "" H 1200 2000 50  0001 C CNN
+	1    1200 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 2100 1200 2100
+Wire Wire Line
+	1200 2100 1200 2000
+Wire Wire Line
+	1600 2200 1200 2200
+Wire Wire Line
+	1200 2200 1200 2300
+$Comp
+L power:VCC #PWR0103
+U 1 1 5B538A41
+P 1200 3100
+F 0 "#PWR0103" H 1200 2950 50  0001 C CNN
+F 1 "VCC" H 1217 3273 50  0000 C CNN
+F 2 "" H 1200 3100 50  0001 C CNN
+F 3 "" H 1200 3100 50  0001 C CNN
+	1    1200 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5B538A54
+P 1200 3400
+F 0 "#PWR0104" H 1200 3150 50  0001 C CNN
+F 1 "GND" H 1205 3227 50  0000 C CNN
+F 2 "" H 1200 3400 50  0001 C CNN
+F 3 "" H 1200 3400 50  0001 C CNN
+	1    1200 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 3100 1200 3200
+Wire Wire Line
+	1200 3200 1600 3200
+Wire Wire Line
+	1600 3300 1200 3300
+Wire Wire Line
+	1200 3300 1200 3400
+Text GLabel 3300 2400 0    50   Input ~ 0
+MOSI
+Text GLabel 3300 2300 0    50   Input ~ 0
+MISO
+$Comp
+L Connector:Conn_01x01 J3
+U 1 1 5B538AF4
+P 4700 2900
+F 0 "J3" H 4780 2942 50  0000 L CNN
+F 1 "Conn_01x01" H 4780 2851 50  0000 L CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01_Pitch2.54mm" H 4700 2900 50  0001 C CNN
+F 3 "~" H 4700 2900 50  0001 C CNN
+	1    4700 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 2900 4500 2900
+$Comp
+L power:GND #PWR0105
+U 1 1 5B538C27
+P 2900 3000
+F 0 "#PWR0105" H 2900 2750 50  0001 C CNN
+F 1 "GND" H 2905 2827 50  0000 C CNN
+F 2 "" H 2900 3000 50  0001 C CNN
+F 3 "" H 2900 3000 50  0001 C CNN
+	1    2900 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0106
+U 1 1 5B538C3C
+P 4700 2100
+F 0 "#PWR0106" H 4700 1950 50  0001 C CNN
+F 1 "VCC" H 4717 2273 50  0000 C CNN
+F 2 "" H 4700 2100 50  0001 C CNN
+F 3 "" H 4700 2100 50  0001 C CNN
+	1    4700 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 2500 4700 2500
+Wire Wire Line
+	4700 2500 4700 2100
+Wire Wire Line
+	3300 2200 2900 2200
+Wire Wire Line
+	2900 2200 2900 2900
+Wire Wire Line
+	3300 2900 2900 2900
+Connection ~ 2900 2900
+Wire Wire Line
+	2900 2900 2900 3000
+Text GLabel 3300 2500 0    50   Input ~ 0
+SPI_CLK
+Text GLabel 3300 2600 0    50   Input ~ 0
+SPI_CS
+Text GLabel 4250 2300 2    50   Input ~ 0
+PB11
+Text GLabel 4250 2400 2    50   Input ~ 0
+PB11
+Text GLabel 3300 2700 0    50   Input ~ 0
+PC2
+$Comp
+L power:GND #PWR0107
+U 1 1 5B538E5A
+P 4350 2800
+F 0 "#PWR0107" H 4350 2550 50  0001 C CNN
+F 1 "GND" V 4355 2672 50  0000 R CNN
+F 2 "" H 4350 2800 50  0001 C CNN
+F 3 "" H 4350 2800 50  0001 C CNN
+	1    4350 2800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4250 2800 4350 2800
+$EndSCHEMATC

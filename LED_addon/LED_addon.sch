@@ -1,0 +1,94 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "LED Blinky Addon"
+Date ""
+Rev ""
+Comp ""
+Comment1 "#badgelife"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Conn_02x02_Counter_Clockwise J1
+U 1 1 5B537AB3
+P 3900 2750
+F 0 "J1" H 3950 2967 50  0000 C CNN
+F 1 "Conn_02x02_Counter_Clockwise" H 3950 2876 50  0000 C CNN
+F 2 "Badgelife:ShittyAddon_PTH_only_SAO" H 3900 2750 50  0001 C CNN
+F 3 "~" H 3900 2750 50  0001 C CNN
+	1    3900 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:LED D1
+U 1 1 5B537B55
+P 2600 2800
+F 0 "D1" V 2638 2683 50  0000 R CNN
+F 1 "LED" V 2547 2683 50  0000 R CNN
+F 2 "LEDs:LED_D5.0mm" H 2600 2800 50  0001 C CNN
+F 3 "~" H 2600 2800 50  0001 C CNN
+	1    2600 2800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #PWR0101
+U 1 1 5B537BED
+P 2600 2400
+F 0 "#PWR0101" H 2600 2250 50  0001 C CNN
+F 1 "VCC" H 2617 2573 50  0000 C CNN
+F 2 "" H 2600 2400 50  0001 C CNN
+F 3 "" H 2600 2400 50  0001 C CNN
+	1    2600 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0102
+U 1 1 5B537C03
+P 3550 2400
+F 0 "#PWR0102" H 3550 2250 50  0001 C CNN
+F 1 "VCC" H 3567 2573 50  0000 C CNN
+F 2 "" H 3550 2400 50  0001 C CNN
+F 3 "" H 3550 2400 50  0001 C CNN
+	1    3550 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5B537C32
+P 2600 3200
+F 0 "#PWR0103" H 2600 2950 50  0001 C CNN
+F 1 "GND" H 2605 3027 50  0000 C CNN
+F 2 "" H 2600 3200 50  0001 C CNN
+F 3 "" H 2600 3200 50  0001 C CNN
+	1    2600 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5B537C48
+P 3550 3200
+F 0 "#PWR0104" H 3550 2950 50  0001 C CNN
+F 1 "GND" H 3555 3027 50  0000 C CNN
+F 2 "" H 3550 3200 50  0001 C CNN
+F 3 "" H 3550 3200 50  0001 C CNN
+	1    3550 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 2850 3550 2850
+Wire Wire Line
+	3550 2850 3550 3200
+Wire Wire Line
+	3550 2400 3550 2750
+Wire Wire Line
+	3550 2750 3700 2750
+Wire Wire Line
+	2600 2400 2600 2650
+Wire Wire Line
+	2600 2950 2600 3200
+$EndSCHEMATC
