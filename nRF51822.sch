@@ -590,10 +590,6 @@ Text GLabel 6050 1500 1    50   Input ~ 0
 P0.26
 Text GLabel 5950 1500 1    50   Input ~ 0
 P0.27
-Text GLabel 5850 1500 1    50   Input ~ 0
-P0.28
-Text GLabel 5750 1500 1    50   Input ~ 0
-P0.29
 Text GLabel 5200 2200 0    50   Input ~ 0
 P0.30
 NoConn ~ 5200 2100
@@ -711,4 +707,8 @@ F 3 "~" H 9150 3850 50  0001 C CNN
 	1    9150 3850
 	1    0    0    -1  
 $EndComp
+Text GLabel 5750 1500 1    50   Input ~ 0
+I2C0_SDA
+Text GLabel 5850 1500 1    50   Input ~ 0
+I2C0_SCL
 $EndSCHEMATC

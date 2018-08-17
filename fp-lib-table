@@ -17,4 +17,5 @@
   (lib (name SeeedOPL-Sensor-2016)(type KiCad)(uri /Users/tf/Documents/Libraries/SeeedOPL_KiCad/SeeedOPL-Sensor-2016.pretty)(options "")(descr ""))
   (lib (name SeeedOPL-Switch-2016)(type KiCad)(uri /Users/tf/Documents/Libraries/SeeedOPL_KiCad/SeeedOPL-Switch-2016.pretty)(options "")(descr ""))
   (lib (name SeeedOPL-Transistor-2016)(type KiCad)(uri /Users/tf/Documents/Libraries/SeeedOPL_KiCad/SeeedOPL-Transistor-2016.pretty)(options "")(descr ""))
+  (lib (name Mechanical)(type KiCad)(uri /Users/tf/Documents/Libraries/KiCad_flummer.net/Mechanical.pretty)(options "")(descr ""))
 )
