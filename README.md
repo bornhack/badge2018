@@ -28,11 +28,11 @@ the parts needed for each boards.
 [HG-datasheet]: https://www.silabs.com/documents/public/data-sheets/EFM32HG322.pdf
 [badge-schematic]: https://github.com/bornhack/badge2018/raw/hardware/schematic.pdf
 
-## Binary firmware files for quick progrgamming or restore
+## Binary firmware files for quick programming or restore
 
-To program the nRF51822 radio controller, you can use the [nRF51 progrgammer][nrf51prog]
+To program the nRF51822 radio controller, you can use the [nRF51 programmer][nrf51prog]
 and if you don't want to compile that yourself, you can [download a binary][nrf51prog-bin]
-ready to be progrgammed on your badge.
+ready to be programmed on your badge.
 
 This piece of firmware runs at full speed and is not power optimized, so to have a decent
 battery life, you can put back the default firmware on the Happy Gecko, when you have
