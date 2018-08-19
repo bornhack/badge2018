@@ -14,10 +14,39 @@ The Nordic chip as a nRF51822 that has a built-in Cortex-M0 that you can also pr
 We have separated the hardware design files from the code and put them in the
 [hardware branch][hardware] for you to have a look at and build on.
 
+If you just need to check the pinout or want to see how stuff is connected, you can
+have a look at the [schematic as a pdf file][badge-schematic].
+
+We have also made a bunch of different add-on boards, and those are to be found in the
+[breakoutboards branch][breakoutboards], which also includes a bit of information about
+the parts needed for each boards.
+
 [hardware]: https://github.com/bornhack/badge2018/tree/hardware
+[breakoutboards]: https://github.com/bornhack/badge2018/tree/breakoutboards
 [silabs]: https://www.silabs.com/
 [HG-manual]: https://www.silabs.com/documents/public/reference-manuals/EFM32HG-RM.pdf
 [HG-datasheet]: https://www.silabs.com/documents/public/data-sheets/EFM32HG322.pdf
+[badge-schematic]: https://github.com/bornhack/badge2018/raw/hardware/schematic.pdf
+
+## Binary firmware files for quick progrgamming or restore
+
+To program the nRF51822 radio controller, you can use the [nRF51 progrgammer][nrf51prog]
+and if you don't want to compile that yourself, you can [download a binary][nrf51prog-bin]
+ready to be progrgammed on your badge.
+
+This piece of firmware runs at full speed and is not power optimized, so to have a decent
+battery life, you can put back the default firmware on the Happy Gecko, when you have
+finished programming the nRF51822.
+
+For doing a restore of the firmware that the badge was delivered with, you can either
+checkout and compile this [master branch][default-fw], or simply
+[download the binary][default-fw-bin] version and program the badge with it using the
+bootloader.
+
+[nrf51prog]: https://github.com/bornhack/badge2018/tree/nrf51prog
+[nrf51prog-bin]: https://esmil.dk/badge2018/nrf51prog.bin
+[default-fw]: https://github.com/bornhack/badge2018/tree/master
+[default-fw-bin]: https://esmil.dk/badge2018/test.bin
 
 ## Develop software for the Happy Gecko
 
