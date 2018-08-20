@@ -25,6 +25,8 @@
 #include "geckonator/emu.h"
 
 #include "badge2018.h"
+#include "i2c0.h"
+#include "display.h"
 
 static const struct {
 	gpio_pin_t pin;
@@ -157,6 +159,19 @@ GPIO_ODD_IRQHandler(void)
 	gpio_handler();
 }
 
+static struct display dp;
+
+/* this function is called by newlib's stdio implementation
+ * (eg. printf) and must be public */
+ssize_t __used
+_write(int fd, const uint8_t *ptr, size_t len)
+{
+	if (fd == 1)
+		display_write(&dp, ptr, len);
+
+	return len;
+}
+
 void __noreturn
 main(void)
 {
@@ -169,6 +184,22 @@ main(void)
 
 	/* configure buttons */
 	buttons_init();
+
+	/* initialize i2c for display */
+	i2c0_init();
+
+	/* don't buffer stdout */
+	setbuf(stdout, NULL);
+
+	/* initialize and turn on display */
+	display_init(&dp);
+	printf("\n\n"
+	       "    Bornhack\n"
+	       "    scale it\n"
+	       "      2018\n"
+	       "   bornhack.dk\n");
+	display_update(&dp);
+	display_on(&dp);
 
 	/* sleep when not interrupted */
 	while (1) {
