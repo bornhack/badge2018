@@ -99,7 +99,7 @@ E=@echo
 Q=@
 endif
 
-sources = init.S geckonator.c main.c
+sources = init.S geckonator.c main.c i2c0.c display.c jeopardy.c
 objects = $(patsubst %,$(OUTDIR)/%.o,$(basename $(sources)))
 
 .SECONDEXPANSION:

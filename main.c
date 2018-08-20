@@ -24,7 +24,11 @@
 #include "geckonator/gpio.h"
 #include "geckonator/emu.h"
 
+#include "geckonator/display.h"
+#include "jeopardy.h"
+
 #include "badge2018.h"
+
 
 static const struct {
 	gpio_pin_t pin;
@@ -127,22 +131,32 @@ gpio_handler(void)
 	gpio_flags_clear(flags);
 
 	if (gpio_in(BUTTON_POWER)) {
-		if (power_pressed)
+		if (power_pressed) {
+            display_off();
 			enter_em4();
+        }
 	} else {
 		gpio_set(LED_POWER);
 		power_pressed = true;
 	}
 
-	if (gpio_in(BUTTON_A))
-		gpio_set(LED_A);
-	else
-		gpio_clear(LED_A);
+	if (gpio_in(BUTTON_A)) {
+		//gpio_set(LED_A);
+        jeopardy_handle_a(0);
+	}
+	else {
+		//gpio_clear(LED_A);
+        jeopardy_handle_a(1);
+	}
 
-	if (gpio_in(BUTTON_B))
-		gpio_set(LED_B);
-	else
-		gpio_clear(LED_B);
+	if (gpio_in(BUTTON_B)) {
+		//gpio_set(LED_B);
+        jeopardy_handle_b(0);
+    }
+	else {
+		//gpio_clear(LED_B);
+        jeopardy_handle_b(1);
+    }
 }
 
 void
@@ -170,8 +184,19 @@ main(void)
 	/* configure buttons */
 	buttons_init();
 
+    /* intialize I2C */
+    i2c0_init();
+    
+    /* initialize and turn on display */
+	display_init();
+	display_update();
+	display_on();
+
+    jeopardy_init();
+    
 	/* sleep when not interrupted */
 	while (1) {
+        jeopardy_mainloop();
 		__WFI();
 	}
 }
