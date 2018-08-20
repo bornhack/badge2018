@@ -31,7 +31,7 @@ static const uint8_t display_init_data[] = {
 	0xA8, /* set multiplex ratio ..                               */
 	0x3F, /*   64MUX                                              */
 	0xD3, /* set display offset ..                                */
-	0x00, /*   0                                                  */
+	0x38, /*  Fix offset problem, courtesy of Klondike            */
 	0x40, /* set display start line = 0                           */
 	0x8D, /* enable change pump regulator ..                      */
 	0x14, /*   (only mentioned in next to last page of datasheet) */
