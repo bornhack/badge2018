@@ -40,6 +40,7 @@ I2C0_IRQHandler(void)
 		i2c0_stop();
 		i2c0_clear_tx();
 		i2c0.len = 1;
+		i2c0.ret = -1;
 		return;
 	}
 
