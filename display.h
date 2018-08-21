@@ -24,13 +24,13 @@
 struct display {
 	uint8_t tx;
 	uint8_t ty;
-	/* reset holds the pre-ample to send the display
+	/* reset holds the pre-amble to send the display
 	 * controller before sending the databits in the
 	 * frame buffer. must be placed just before
 	 * the framebuffer, so we can just send all bytes
 	 * starting from reset and continuing into
 	 * the frame buffer. */
-	uint8_t reset[8];
+	uint8_t reset[14];
 	uint8_t framebuf[128 * 64 / 8];
 };
 
