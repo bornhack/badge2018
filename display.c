@@ -54,24 +54,36 @@ static const uint8_t display_init_data[] = {
 	0x2E, /* deactivate scroll                                    */
 	0xA4, /* entire display on: resume to ram content display     */
 	0xA6, /* set normal/inverse display: normal                   */
-	0x10, /* set higher column start address = 0                  */
-	0x00, /* set lower column start address = 0                   */
-	0xB0, /* set page address = 0                                 */
+	0x21, /* Select columns                                       */
+	0x00, /* 0                                                    */
+	0x7f, /* to 127                                               */
+	0x22, /* Select pages                                         */
+	0x00, /* 0                                                    */
+	0x07, /* to 7                                                 */
 };
 
 int
 display_init(struct display *dp)
 {
+	int ret;
 	memset(dp, 0, sizeof(struct display));
-	dp->reset[0] = 0x78; /* address                             */
-	dp->reset[1] = 0x80; /* next byte is control                */
-	dp->reset[2] = 0x00; /* set higher column start address = 0 */
-	dp->reset[3] = 0x80; /* next byte is control                */
-	dp->reset[4] = 0x10; /* set lower column start address = 0; */
-	dp->reset[5] = 0x80; /* next byte is control                */
-	dp->reset[6] = 0xB0, /* set page address = 0                */
-	dp->reset[7] = 0x40; /* the remaining bytes are data bytes  */
-	return i2c0_write(display_init_data, sizeof(display_init_data));
+	dp->reset[ 0] = 0x78; /* address                             */
+	dp->reset[ 1] = 0x80; /* next byte is control                */
+	dp->reset[ 2] = 0x21; /* Select columns                      */
+	dp->reset[ 3] = 0x80; /* next byte is control                */
+	dp->reset[ 4] = 0x00; /* 0;                                  */
+	dp->reset[ 5] = 0x80; /* next byte is control                */
+	dp->reset[ 6] = 0x7f, /* to 127                              */
+	dp->reset[ 7] = 0x80; /* next byte is control                */
+	dp->reset[ 8] = 0x22; /* Select pages                        */
+	dp->reset[ 9] = 0x80; /* next byte is control                */
+	dp->reset[10] = 0x00; /* 0                                   */
+	dp->reset[11] = 0x80; /* next byte is control                */
+	dp->reset[12] = 0x07, /* to 7                                */
+	dp->reset[13] = 0x40; /* the remaining bytes are data bytes  */
+	/*The display takes some time to initialize and will return nack until that happens*/
+	while ((ret = i2c0_write(display_init_data, sizeof(display_init_data))) == -1);
+	return ret;
 }
 
 int
