@@ -28,6 +28,8 @@
 #include "i2c0.h"
 #include "display.h"
 
+static struct display dp;
+
 static const struct {
 	gpio_pin_t pin;
 	uint8_t state;
@@ -129,8 +131,10 @@ gpio_handler(void)
 	gpio_flags_clear(flags);
 
 	if (gpio_in(BUTTON_POWER)) {
-		if (power_pressed)
+		if (power_pressed) {
+			display_off(&dp);
 			enter_em4();
+		}
 	} else {
 		gpio_set(LED_POWER);
 		power_pressed = true;
@@ -158,8 +162,6 @@ GPIO_ODD_IRQHandler(void)
 {
 	gpio_handler();
 }
-
-static struct display dp;
 
 /* this function is called by newlib's stdio implementation
  * (eg. printf) and must be public */
