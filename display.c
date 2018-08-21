@@ -65,6 +65,7 @@ static const uint8_t display_init_data[] = {
 int
 display_init(struct display *dp)
 {
+	int ret;
 	memset(dp, 0, sizeof(struct display));
 	dp->reset[ 0] = 0x78; /* address                             */
 	dp->reset[ 1] = 0x80; /* next byte is control                */
@@ -80,7 +81,9 @@ display_init(struct display *dp)
 	dp->reset[11] = 0x80; /* next byte is control                */
 	dp->reset[12] = 0x07, /* to 7                                */
 	dp->reset[13] = 0x40; /* the remaining bytes are data bytes  */
-	return i2c0_write(display_init_data, sizeof(display_init_data));
+	/*The display takes some time to initialize and will return nack until that happens*/
+	while ((ret = i2c0_write(display_init_data, sizeof(display_init_data))) == -1);
+	return ret;
 }
 
 int
